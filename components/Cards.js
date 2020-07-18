@@ -75,5 +75,9 @@ function articleBuilder(data) {
     authorPic.src = data.authorPhoto
     authorName.textContent = `By: ${data.authorName}`
 
+    card.addEventListener('click', () => {
+        console.log(headLine.textContent)
+    })
+
     return card;
 }
