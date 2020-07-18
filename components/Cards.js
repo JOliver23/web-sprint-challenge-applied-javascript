@@ -27,3 +27,25 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .catch(err => {
         console.log('Yuh done messed up', err)
     })
+
+function articleBuilder(data) {
+    const card = document.createElement('div')
+    const headLine = document.createElement('div')
+    const authorDiv = document.createElement('div')
+    const picCont = document.createElement('div')
+    const authorPic = document.createElement('img')
+    const authorName = document.createElement('span')
+
+    card.classList.add('card')
+    headLine.classList.add('headline')
+    authorDiv.classList.add('author')
+    picCont.classList.add('img-container')
+
+    card.appendChild(headLine)
+    card.appendChild(authorDiv)
+    authorDiv.appendChild(picCont)
+    authorDiv.appendChild(authorName)
+    picCont.appendChild(authorPic)
+
+    return card;
+}
