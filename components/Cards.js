@@ -31,6 +31,23 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
     //         })
     //     })
     // })
+    .then(response => {
+        response.data.articles.javascript.forEach(article => {
+            cardSection.appendChild(articleBuilder(article))
+        })
+        response.data.articles.bootstrap.forEach(article => {
+            cardSection.appendChild(articleBuilder(article))
+        })
+        response.data.articles.technology.forEach(article => {
+            cardSection.appendChild(articleBuilder(article))
+        })
+        response.data.articles.jquery.forEach(article => {
+            cardSection.appendChild(articleBuilder(article))
+        })
+        response.data.articles.node.forEach(article => {
+            cardSection.appendChild(articleBuilder(article))
+        })
+    })
     .catch(err => {
         console.log('Yuh done messed up', err)
     })
