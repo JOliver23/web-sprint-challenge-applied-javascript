@@ -13,7 +13,7 @@ const tabSection = document.querySelector('.topics')
 
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
     .then(response => {
-        console.log('axios req', response)
+        // console.log('axios req', response)
         response.data.topics.forEach(item => {
             tabSection.appendChild(tabBuilder(item))
         })
